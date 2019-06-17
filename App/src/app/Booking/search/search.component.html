@@ -1,0 +1,40 @@
+<mat-card>
+  <div>
+      
+    <p>
+      <mat-form-field>
+        <input matInput placeholder = "Enter location"  formControlName="Location" required>
+        <mat-error *ngIf="profileForm.get('Location').invalid"></mat-error>
+      </mat-form-field>
+    </p>
+  </div>
+  <div>
+   
+   <p>
+      <mat-form-field>
+          <input matInput [matDatepicker]="picker" placeholder="Choose a date">
+          <mat-datepicker-toggle matSuffix [for]="picker"></mat-datepicker-toggle>
+          <mat-datepicker #picker></mat-datepicker>
+        </mat-form-field>
+        
+  </p>
+</div>
+<div>
+  
+    <p>
+        <mat-form-field>
+          <input matInput placeholder = "Enter NO Of Guest"  formControlName="NoOfGuest" required>
+          <mat-error *ngIf="profileForm.get('NoOfGuest').invalid"></mat-error>
+        </mat-form-field>
+      </p>
+    </div>
+    <button button="submit" mat-button color="primary" class="btn">SEARCH</button>
+    
+      
+    
+</mat-card>
+
+
+
+
+<app-hotel-search></app-hotel-search>

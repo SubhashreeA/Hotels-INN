@@ -1,0 +1,16 @@
+
+ 
+<div fxLayout="row">
+  <div class="img"><img src="../../../assets/images/hotel.jpeg" height="200px" width="250px"></div>
+  <div class="hotel">    
+        <span>{{hotelItem.name}}</span>
+        <p>{{hotelItem.location}},{{hotelItem.city}}</p>
+        <p>{{hotelItem.amenities}}</p>
+        <span class="rating"><mat-icon>star</mat-icon>{{hotelItem.averageRating}}</span>
+        &nbsp;<span>{{hotelItem.price|currency:'&#8377;'}}</span>
+        <div fxLayoutGap="10px" class="btn">
+        <button mat-button class="viewbutton">View Details</button>
+        <button mat-button class="book">Book now</button>
+      </div>
+  </div>
+</div>

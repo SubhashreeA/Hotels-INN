@@ -1,0 +1,33 @@
+<div class="container"
+     fxLayout
+     fxLayout.xs="row"
+     fxLayoutAlign="left"
+     fxLayoutGap ="10px"
+     fxLayoutGap.xs="0">
+  
+
+
+<app-hotel-filter></app-hotel-filter>
+<div fxLayout.xs="row" fxLayoutGap.xs="row">
+<app-hotel-search></app-hotel-search>
+<div class="result">
+  <span class="result">{{establishments.length}}</span> 
+   <div class="sort" >
+     <span>SORT BY</span>
+     <span class="rating" (click)="getRating()"><mat-icon>swap_vertical</mat-icon>Rating By</span>
+     <span class="price" (click)="getPrice()"><mat-icon>swap_vertical</mat-icon>Price By</span>
+   </div>
+  </div>
+  <mat-divider></mat-divider>
+<div fxLayout="row wrap" class="item">
+    <div *ngFor ="let establishment of establishments" fxFlex>
+      <app-hotel-item [hotelItem]="establishment"></app-hotel-item>
+    </div>
+</div>
+</div>
+</div>
+
+
+<!-- <mat-grid-list cols="2" rowHeight="2:1"> -->
+ 
+<!-- </mat-grid-list> -->

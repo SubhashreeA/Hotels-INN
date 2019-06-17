@@ -1,0 +1,16 @@
+.hotel{
+    padding:10px
+}
+.viewbutton{
+    background-color: bisque
+}
+.book{
+    background-color:burlywood
+}
+.rating{
+    font-size:12px;color:beige;background-color: green;padding: 0px 2%;text-align: center
+
+}
+.btn{
+    margin-top: 20px
+}

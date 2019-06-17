@@ -1,0 +1,66 @@
+
+<mat-card>
+
+<form [formGroup]="profileForm" (ngSubmit)="onSubmit()">
+   
+      <p>Filters</p>
+     
+        <div>
+      
+      <mat-form-field>
+          <mat-icon matPrefix>search</mat-icon>
+              <input type="text" matInput [formControl]="myControl"  placeholder="search by hotel" formControlName="hotelName">
+            </mat-form-field>
+            
+            <!-- <mat-autocomplete #auto="matAutocomplete">
+              <!-- <mat-option *ngFor="let option of options" [value]="option">{{option}}</mat-option> -->
+            <!-- </mat-autocomplete> -->
+             
+          </div>
+      
+      <mat-divider></mat-divider>
+    
+    
+     <p>Type</p>
+     <div>
+        <mat-checkbox formControlName="hotel">Hotel</mat-checkbox><br>
+        <mat-checkbox formControlName="roomstay">Room Stay</mat-checkbox>
+        <mat-divider></mat-divider>
+      </div>
+     
+  
+    <p>Location </p>
+    <div>
+    <mat-checkbox>Banglore</mat-checkbox><br>
+    <mat-checkbox>Mysore</mat-checkbox><br>
+    <mat-checkbox>Mangalore</mat-checkbox><br>
+    <mat-checkbox>Udupi</mat-checkbox>
+    <mat-divider></mat-divider>
+  </div>
+    <p>Ratings</p>
+     <span *ngFor="let item of [1,2,3,4]">
+       <i class="material-icons">star</i>
+     </span><a (click)="setRating(4)">&Up</a><br/>
+     <span *ngFor="let item of [1,2,3]">
+      <i class="material-icons">star</i>
+    </span><a (click)="setRating(3)">&Up</a><br/>
+    <span *ngFor="let item of [1,2]">
+      <i class="material-icons">star</i>
+    </span><a (click)="setRating(2)">&Up</a><br/>
+    <span *ngFor="let item of [1]">
+      <i class="material-icons">star</i>
+    </span><a (click)="setRating(1)">&Up</a><br/>
+    <mat-divider></mat-divider>
+
+    <p>Price</p>
+    <mat-slider
+        class="example-margin"
+        [max]="10000"
+        [min]="1000"
+        formControlName="priceMin">
+    </mat-slider>
+    <p>{{profileForm.value.priceMin}}&nbsp;&nbsp;&nbsp;{{profileForm.value.priceMax}}</p>
+  
+ 
+  </form>
+</mat-card>

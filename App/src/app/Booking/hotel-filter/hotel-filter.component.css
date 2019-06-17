@@ -1,0 +1,25 @@
+h5{
+    text-align: left;
+    text-decoration-style: wavy;
+    font-style: italic;
+    color: blue
+}
+p{
+    font-style:italic;
+    text-align: left
+}
+div{
+    text-align: justify
+}
+/* mat-icon{
+    color :
+} */
+material-icons{
+    padding: 0%;
+    word-spacing: 1px;
+}
+.sort{
+    float: right;
+    font-size: 15px
+    
+    }
