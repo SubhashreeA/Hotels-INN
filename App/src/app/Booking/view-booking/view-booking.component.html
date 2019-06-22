@@ -1,0 +1,60 @@
+
+<!-- <div fxLayout="row"> -->
+  <form [formGroup]="profileForm" (ngSubmit)="onsubmit()">
+  <div class="img"><img src="../../../assets/images/hotel.jpeg" height="500px" width="1300px"></div><br/>
+<!-- </div> -->
+<!-- <div fxLayout="row wrap" fxLayout="70%"> -->
+ 
+  <div class="hotel">    
+        <span><b>{{HotelData.name}}</b></span>
+        <p>{{HotelData.location}},{{HotelData.city}}</p>
+        <!-- <p>{{HotelData.amenities}}</p> -->
+        <!-- <span class="rating"><mat-icon>star</mat-icon>{{HotelData.averageRating}}</span> -->
+        Guest: &nbsp;&nbsp;<span class="">{{HotelData.capacity}}</span><br/>
+        Price:{{HotelData.price * count}}
+        
+        <div>
+          From <mat-form-field >
+         <input matInput [matDatepicker]="picker" placeholder="Choose Start date" formControlName="date">
+            <mat-datepicker-toggle matSuffix [for]="picker"></mat-datepicker-toggle>
+            <mat-datepicker #picker></mat-datepicker>
+            </mat-form-field>
+            To<mat-form-field>
+           <input matInput [matDatepicker]="picker1" placeholder="Choose End date"formControlName="todate" >
+            <mat-datepicker-toggle matSuffix [for]="picker1"></mat-datepicker-toggle>
+            <mat-datepicker #picker1></mat-datepicker>
+            </mat-form-field>
+            <div class="currency" >
+        
+                &nbsp;<span >{{HotelData.price|currency:'&#8377;'}}</span>/per room
+               <div class="book">
+                <button mat-button >Book now</button>
+              </div>
+      </div>
+     
+    </div>
+    </div>
+    
+    <mat-divider></mat-divider>
+  
+ 
+ 
+  
+       
+      <div *ngFor="let review of HotelData.reviews" class=div2 fxLayout="row">
+      <div class="div2">
+        <img src="../../assets/images/images.png" alt="Avatar" style="width:50px" class="icon">
+        <p>{{review.reviewed_by.name}}</p>
+      </div>
+      <div class="column" style="margin-left: 50px">
+        <div class="row">
+          <span *ngFor="let icon of [].constructor(review.rating)">
+            <mat-icon>star</mat-icon>
+          </span>
+        </div>
+        <p> {{review.reviewcontent}} </p>
+      </div>
+    </div>
+  
+  </form>
+  <!-- </div>  -->

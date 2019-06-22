@@ -1,0 +1,27 @@
+.currency{
+    float:right;
+}
+.book{
+    height: 10px;
+    width: 20px;
+    
+}
+button{
+    background-color:lightblue;
+}
+.div1{
+    text-align: center
+}
+.icon{
+    
+    height: 50px;
+    width:50px;
+    border-radius: 50%;
+
+}
+.div2{
+    float: left;
+}
+.para{
+    float: left;
+}

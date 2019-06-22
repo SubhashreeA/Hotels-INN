@@ -1,3 +1,7 @@
 .booking{
-    text-align-last: right
+    float: right;
+    color: lightblue;
+}
+.first{
+float: left;
 }

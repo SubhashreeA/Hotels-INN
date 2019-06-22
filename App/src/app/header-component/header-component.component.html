@@ -1,0 +1,23 @@
+
+<mat-toolbar color="primary">
+    <mat-toolbar-row>
+        <span> <i>Booking My Room!</i></span>
+       <span style="margin-left:60%">
+        <button mat-button  *ngIf="isLoggedIn" (click)="auth.logout()"><b>LogOut</b></button>
+        <button mat-button routerLink="/signin" *ngIf="!isLoggedIn"><b>LogIn</b> </button>
+        <button mat-button routerLink="/mybooking" *ngIf="isLoggedIn"><b>My Booking</b></button>
+        
+        <button  mat-button routerLink="/myprofile" *ngIf="isLoggedIn"><b>My Profile</b></button>
+       
+        </span>
+    </mat-toolbar-row>
+    </mat-toolbar>
+    <!-- <div fxLayout="row" fxLayoutGap="80%">
+        <div class="first">
+        <i>Booking My Room!</i>
+         </div>
+        <div class="booking"> 
+        <button mat-button ><b>My Booking</b></button>
+        </div>
+        
+      </div> -->

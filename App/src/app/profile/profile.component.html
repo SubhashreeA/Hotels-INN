@@ -1,0 +1,47 @@
+<div class="divclass" fxLayout="row">
+  <div id="formDiv">
+  <form [formGroup]="profileForm" (ngSubmit)="onSubmit()">
+      <mat-card>
+      <mat-card-title>
+           Edit Profile
+       </mat-card-title>
+   
+    <p>
+      <mat-form-field>
+        <input matInput placeholder = "Enter your Name"  formControlName="name" required>
+        <mat-error *ngIf="profileForm.get('name').invalid">{{getUsernameErrorMessage()}}</mat-error>
+      </mat-form-field>
+    </p>
+    <p>
+      <mat-form-field>
+        <input matInput placeholder="Enter your password" formControlName="password" required>
+        <mat-error *ngIf="profileForm.get('password').invalid">{{getPasswordErrorMessage()}}</mat-error>
+      </mat-form-field>
+    </p>
+   
+    <p>
+      <mat-form-field>
+        <input matInput placeholder="Enter your email" formControlName="email" required>
+        <mat-error *ngIf="profileForm.get('email').invalid">{{getEmailErrorMessage()}}</mat-error>
+      </mat-form-field>
+    </p>
+    <p>
+      <mat-form-field>
+        <input matInput placeholder="Enter your phonenumber" formControlName="phoneNumber" required>
+        <mat-error *ngIf="profileForm.get('phoneNumber').invalid">{{getPhonenumberErrorMessage()}}</mat-error>
+      </mat-form-field>
+    </p>
+    
+    <p>
+        <mat-radio-group  formControlName="role"  aria-label="Select an option">
+          <mat-radio-button value="Merchant">Merchant</mat-radio-button>
+          <mat-radio-button value="user">User</mat-radio-button>
+        </mat-radio-group>
+      </p>
+    
+    
+    <button mat-raised-button color="primary">Update</button>
+  </mat-card>
+  </form>
+  </div>
+  </div>

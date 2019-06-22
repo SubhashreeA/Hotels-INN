@@ -1,37 +1,37 @@
-<form [formGroup]="profileForm" (ngSubmit)="onSubmit()">
+<div class="divclass">
+   <form [formGroup]="profileForm" (ngSubmit)="onSubmit()">
     <div fxLayout="row" fxLayoutAlign="space-between" fxLayoutGap=50px>
-      <div>
+      <!-- <div> -->
       
-      <p>
+      
         <mat-form-field>
-          <input matInput placeholder = "Enter location"  formControlName="Location" required>
-          <mat-error *ngIf="profileForm.get('Location').invalid"></mat-error>
+          <input matInput placeholder = "Enter location"  formControlName="Location" >
+          <!-- <mat-error *ngIf="profileForm.get('Location').invalid"></mat-error> -->
         </mat-form-field>
-      </p>
-    </div>
-    <div>
      
-     <p>
+    <!-- </div> -->
+    <!-- <div> -->
+     
+    
         <mat-form-field>
-            <input matInput [matDatepicker]="picker" placeholder="Choose a date">
+            <input matInput [matDatepicker]="picker" placeholder="Choose a date" formControlName="date" >
             <mat-datepicker-toggle matSuffix [for]="picker"></mat-datepicker-toggle>
             <mat-datepicker #picker></mat-datepicker>
           </mat-form-field>
           
-    </p>
-  </div>
-  <div>
+  
+  <!-- </div> -->
+  <!-- <div> -->
     
-      <p>
           <mat-form-field>
-            <input matInput placeholder = "Enter NO Of Guest"  formControlName="NoOfGuest" required>
-            <mat-error *ngIf="profileForm.get('NoOfGuest').invalid"></mat-error>
+            <input type="number" matInput placeholder = "Enter NO Of Guest"  formControlName="NoOfGuest" >
+            <!-- <mat-error *ngIf="profileForm.get('NoOfGuest').invalid"></mat-error> -->
           </mat-form-field>
-        </p>
-      </div>
-      <button button="submit" mat-button color="primary" class="btn">SEARCH</button>
-      
         
+      <!-- </div> -->
+      <button mat-raised-button color="primary">Search</button>
       </div>
     
   </form>
+  
+  </div>

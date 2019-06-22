@@ -6,10 +6,10 @@
         <span>{{hotelItem.name}}</span>
         <p>{{hotelItem.location}},{{hotelItem.city}}</p>
         <p>{{hotelItem.amenities}}</p>
-        <span class="rating"><mat-icon>star</mat-icon>{{hotelItem.averageRating}}</span>
+        <span class="rating"><mat-icon>star</mat-icon>{{hotelItem.averagerating}}</span>
         &nbsp;<span>{{hotelItem.price|currency:'&#8377;'}}</span>
         <div fxLayoutGap="10px" class="btn">
-        <button mat-button class="viewbutton">View Details</button>
+        <button mat-button class="viewbutton" [routerLink]="['/booking/',hotelItem.id]">View Details</button>
         <button mat-button class="book">Book now</button>
       </div>
   </div>
